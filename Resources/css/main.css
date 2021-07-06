@@ -1,0 +1,38 @@
+﻿
+
+div.nav-text:hover {
+    color: #3C9BAB;
+    cursor: pointer;
+}
+
+div.content-left{
+    width: 35%;
+    margin: 4% 0.5rem;
+}
+
+div.content-right{
+    width: 35%;
+    margin: 2% 0.5rem 1rem 15%;
+    text-align: center;
+}
+
+h2.center-text{
+    color: #3F9E76;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Roboto Regular';
+    margin: 0.5rem 1rem;
+}
+
+h2.nexus-text {
+    color: #032538;
+    text-align: center;
+    font-family: 'Roboto Regular';
+}
+
+p.center-graph {
+    color: #999;
+    text-align: left;
+    font-family: 'Roboto Regular';
+    margin: 2rem 1.2rem;
+}
