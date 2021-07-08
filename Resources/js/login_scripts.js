@@ -18,6 +18,9 @@ function OnClickLogin() {
     xhr.onload = function () {
         VerifyFirstStepResponse(xhr);
     };
+
+    showOrHiddenLoginError(false);
+    showOrHiddenPasswordError(false);
     xhr.send();
 }
 
@@ -32,7 +35,7 @@ function VerifyFirstStepResponse(xhr) {
     }
     else {
         valid = false;
-        setLoginError('Username or e-mail invalid or not exists!');
+        showOrHiddenLoginError(true);
     }
 
     if (valid) {
@@ -41,9 +44,9 @@ function VerifyFirstStepResponse(xhr) {
         xhr.onload = function () {
             status = xhr.status;
             if (status == 200) {
-
+                window.location = '../index.html'
             } else {
-                setPasswordError('Password invalid or incorrect!');
+                showOrHiddenPasswordError(true);
             }
         };
         xhr.send();
@@ -51,18 +54,30 @@ function VerifyFirstStepResponse(xhr) {
 
 };
 
-function setLoginError(text) {
+function showOrHiddenLoginError(show) {
     var inputUser = document.getElementById('inputUser')
     var userError = document.getElementById('userError')
-    inputUser.classList.add('error');
-    userError.append(text);
+
+    if (show) {
+        inputUser.classList.add('error');
+        userError.classList.add('form-error-visible');
+    } else {
+        inputUser.classList.remove('error');
+        userError.classList.remove('form-error-visible');
+    }
 }
 
-function setPasswordError(text) {
-    var inputUser = document.getElementById('inputPassword')
+function showOrHiddenPasswordError(show) {
+    var inputPassword = document.getElementById('inputPassword')
     var userError = document.getElementById('passwordError')
-    inputUser.classList.add('error');
-    userError.append(text);
+
+    if (show) {
+        inputPassword.classList.add('error');
+        userError.classList.add('form-error-visible');
+    } else {
+        inputPassword.classList.remove('error');
+        userError.classList.remove('form-error-visible');
+    }
 }
 
 
