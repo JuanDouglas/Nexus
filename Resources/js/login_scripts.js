@@ -82,9 +82,12 @@ function showOrHiddenPasswordError(show) {
 
 function showOrHidePassword() {
     var inputPassword = document.getElementById('inputPassword')
+    var checkbox = document.getElementById('lblCBSPas');
     if (inputPassword.type == "password") {
         inputPassword.type = "text";
+        checkbox.innerText = 'Hide password';
     } else {
         inputPassword.type = "password";
+        checkbox.innerText = 'Show password';
     }
 }
