@@ -74,6 +74,7 @@ div.body {
 }
 
 button.outlined {
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.2);
     padding: 0.5rem 2rem;
     background: transparent;
     outline-color: #032538;
@@ -93,6 +94,7 @@ button.outlined {
     }
 
 button.normal {
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.2);
     padding: 0.5rem 2rem;
     background: #032538;
     margin: 0rem 1rem;
@@ -110,6 +112,25 @@ button.normal {
         color: #032538;
         background: #3F9E76;
     }
+    .btn-normal {
+        box-shadow: 0 0 12px 0 rgba(0,0,0,0.2);
+        padding: 0.5rem 2rem;
+        background: #032538;
+        margin: 0rem 1rem;
+        font-size: medium;
+        color: white;
+        cursor: pointer;
+        border-radius: 1rem;
+        border-color: #032538;
+        border-style: solid;
+    }
+    
+        .btn-normal:hover {
+            border-color: #3F9E76;
+            outline-color: #3F9E76;
+            color: #032538;
+            background: #3F9E76;
+        }
 
 footer {
     text-align: center;
@@ -130,24 +151,31 @@ i.reference {
     }
 
 p {
-    margin: 0;
+    margin: 1px;
 }
 
     p.left {
         text-align: left;
     }
 
-    p.link {
-        text-align: right;
-        font-size: 14px;
-        margin-top: 5px;
-        color: #3F9E76;
+    p.right {
+        text-align: left;
+        left: 10rem;
+        margin-top:1rem;
+        position: relative;
     }
 
-        p.link:hover {
-            color: #032538;
-            cursor: pointer;
-        }
+.link {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #3F9E76;
+}
+
+    .link:hover {
+        color: #032538;
+        cursor: pointer;
+    }
 
 label.link {
     text-align: right;
@@ -218,7 +246,11 @@ input.error {
     transition: 0.1s;
 }
 
-input.checkbox{
+input.error[type="checkbox"] {
+    border-color: #D32F55
+}
+
+input.checkbox {
     font: 16pt sans-serif;
     color: #000;
     cursor: pointer;
@@ -242,4 +274,9 @@ input.checkbox{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.vertical-center {
+    margin-top: auto;
+    margin-top: 20%
 }
