@@ -1,0 +1,259 @@
+:root {
+    --color-secondary: #257470;
+    --color-primary: #08ac4b;
+    --color-error: red;
+    --card-radius: .75rem;
+    --color-text-title: #182538;
+    --color-text-setence: #6B7A90;
+}
+
+@font-face {
+    font-family: 'Heebo Thin';
+    font-weight: 500;
+    src: url(../font/Heebo/Heebo-Thin.ttf)
+}
+
+@font-face {
+    font-family: 'Heebo Regular';
+    font-weight: 500;
+    src: url(../font/Heebo/Heebo-Regular.ttf)
+}
+
+@font-face {
+    font-family: 'Heebo Bold';
+    font-weight: 500;
+    src: url(../font/Heebo/Heebo-Bold.ttf)
+}
+
+body {
+    margin: 0;
+    font-family: 'Heebo Regular';
+}
+
+nav {
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding: .7rem;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(.2rem);
+    background-color: #6a817854;
+}
+
+    nav .before {
+        filter: blur(1px);
+    }
+
+    nav .logo {
+        width: 7.5rem;
+        height: 2.5rem;
+        transition: 0.3s;
+        border-radius: 2rem;
+        position: absolute;
+        left: 2rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        background: #a5a5a542;
+        box-shadow: 0px 10px 42px -16px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 10px 42px -16px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 10px 42px -16px rgba(0,0,0,0.75);
+    }
+
+        nav .logo:hover {
+            transition: 0.3s;
+            transform: perspective(16rem) translate3d(0,0,.45rem);
+            box-shadow: 0px 10px 42px -2px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 0px 10px 42px -2px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 10px 42px -2px rgba(0,0,0,0.75);
+        }
+
+main {
+    background: linear-gradient(121deg, var(--color-secondary), #102C57);
+    background-size: 600% 600%;
+    height: 80%;
+    min-width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 15% 0 7rem 0;
+    -webkit-animation: GradientAnimation 12s ease infinite;
+    -moz-animation: GradientAnimation 12s ease infinite;
+    -o-animation: GradientAnimation 12s ease infinite;
+    animation: GradientAnimation 12s ease infinite;
+}
+
+    main::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 13.3rem;
+        background: url(../img/wave.svg);
+        background-repeat: repeat-x;
+        z-index: 0;
+    }
+
+    main section {
+        color: white;
+    }
+
+        main section.text {
+        }
+
+            main section.text h1 {
+                font-family: 'Heebo Bold';
+                font-size: 2.7rem;
+                margin: 1.3rem;
+            }
+
+            main section.text .setence {
+                width: 100%;
+                text-align: center;
+                font-family: 'Heebo Thin';
+            }
+
+                main section.text .setence .content {
+                    max-width: 28rem;
+                    margin: auto;
+                    font-size: larger;
+                }
+
+        main section.read-more {
+            margin-top: 5rem;
+        }
+
+            main section.read-more p {
+                margin: 0;
+            }
+
+            main section.read-more img.arrow {
+                width: 3rem;
+                margin: 0;
+                animation: MoreArrowAnimation 1.3s cubic-bezier(0.61, 0.01, 0.49, 0.8) infinite;
+            }
+
+                main section.read-more img.arrow:hover {
+                    transform: perspective(6rem);
+                    cursor: pointer;
+                    animation: none;
+                }
+
+section.content {
+    padding: 0 5rem;
+    text-align: center;
+}
+
+    section.content h1 {
+        font-size: 3rem;
+        color: var(--color-secondary);
+        font-family: 'Heebo Bold';
+        margin: 0 0 4rem 0;
+    }
+
+.feature {
+    display: inline-flex;
+    width: 100%;
+}
+
+    .feature div {
+        width: 50%;
+        text-align: center;
+        color: var(--color-text-setence);
+    }
+
+        .feature div .setence {
+            width: 23rem;
+            margin: auto;
+            font-size: 1.15rem;
+        }
+
+        .feature div h1 {
+            color: var(--color-text-title);
+            margin: 0 0 1rem 0;
+            font-size: 2rem;
+        }
+
+        .feature div img.icon {
+            width: 10rem;
+            height: 10rem;
+            margin: 3rem;
+        }
+
+    .feature .right {
+        float: right;
+    }
+
+    .feature .left {
+        float: left;
+    }
+
+@-webkit-keyframes GradientAnimation {
+    0% {
+        background-position: 14% 0%
+    }
+
+    50% {
+        background-position: 87% 100%
+    }
+
+    100% {
+        background-position: 14% 0%
+    }
+}
+
+@-moz-keyframes GradientAnimation {
+    0% {
+        background-position: 14% 0%
+    }
+
+    50% {
+        background-position: 87% 100%
+    }
+
+    100% {
+        background-position: 14% 0%
+    }
+}
+
+@-o-keyframes GradientAnimation {
+    0% {
+        background-position: 14% 0%
+    }
+
+    50% {
+        background-position: 87% 100%
+    }
+
+    100% {
+        background-position: 14% 0%
+    }
+}
+
+@keyframes GradientAnimation {
+    0% {
+        background-position: 14% 0%
+    }
+
+    50% {
+        background-position: 87% 100%
+    }
+
+    100% {
+        background-position: 14% 0%
+    }
+}
+
+@keyframes MoreArrowAnimation {
+    0% {
+        transform: translate3d(0, 0, 1rem);
+    }
+
+    50% {
+        transform: translate3d(0, 1rem, 1rem);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 1rem);
+    }
+}
