@@ -41,8 +41,8 @@ nav {
     background-color: #6a817854;
 }
 
-    nav .before {
-        filter: blur(1px);
+    nav .content {
+        display: inline-flex;
     }
 
     nav .logo {
@@ -50,9 +50,9 @@ nav {
         height: 2.5rem;
         transition: 0.3s;
         border-radius: 2rem;
-        position: absolute;
         left: 2rem;
         padding: 0.5rem;
+        margin: 0 2rem;
         cursor: pointer;
         background: #a5a5a542;
         box-shadow: 0px 10px 42px -16px rgba(0,0,0,0.75);
@@ -139,54 +139,261 @@ main {
                     animation: none;
                 }
 
-section.content {
-    padding: 0 5rem;
+section.body {
+    margin: 0 5rem;
+}
+
+section.advantages div.cards {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+div.cards .feature {
+    max-width: 13rem;
+    text-align: center;
+    padding: 1rem;
+    background: #e5e5e5;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 42px -16px rgba(0,0,0,0.75);
+    margin: 1rem;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+
+    div.cards .feature:hover {
+        transform: perspective(7.5rem) translate3d(0, 0, 10px);
+        transition: .5s;
+    }
+
+.feature h1 {
+    color: var(--color-text-title);
+}
+
+.feature p {
+    color: var(--color-text-setence);
+}
+
+section.singup {
+    display: inline-flex;
+    max-width: 50rem;
+    border-radius: .8rem;
+    text-align: left;
+    padding: 1.5rem;
+    box-shadow: 0px 10px 42px -16px rgb(0 0 0 / 75%);
+    margin-bottom: -10rem;
+    background: white;
+}
+
+    section.singup div {
+        min-width: fit-content;
+    }
+
+        section.singup div.text {
+            width: 60%;
+            padding: 0 6rem 0 2rem;
+        }
+
+            section.singup div.text h1 {
+                margin: 0;
+                color: var(--color-text-title);
+            }
+
+            section.singup div.text p {
+                color: var(--color-text-setence);
+                margin: .1rem 0;
+            }
+
+        section.singup div.buttons {
+            width: 40%;
+            display: inline-flex;
+        }
+
+button {
+    font-size: 1rem;
+    font-family: 'Heebo Regular';
+    padding: .5rem 2.5rem;
+    cursor: pointer;
+    min-width: 9rem;
+    margin: .25rem;
+    height: fit-content;
+    transition: .2s ease;
+    border-radius: .5rem;
+}
+
+    button:hover {
+        box-shadow: 0px 1px 22px 2px #08ac52c4;
+        transform: perspective(7rem) translate3d(0, 0, .25rem);
+    }
+
+    button.positive {
+        background: linear-gradient(45deg, var(--color-secondary), #08ac4b);
+        border: none;
+        outline: none;
+        color: white;
+    }
+
+    button.negative {
+        border-color: var(--color-primary);
+        border-width: 1px;
+        color: var(--color-primary);
+        border-style: solid;
+    }
+
+footer {
     text-align: center;
 }
 
-    section.content h1 {
-        font-size: 3rem;
-        color: var(--color-secondary);
-        font-family: 'Heebo Bold';
-        margin: 0 0 4rem 0;
-    }
-
-.feature {
-    display: inline-flex;
-    width: 100%;
+.list-reset {
+    list-style: none;
+    padding: 0
 }
 
-    .feature div {
-        width: 50%;
-        text-align: center;
-        color: var(--color-text-setence);
+.container, .container-sm {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px
+}
+
+@media (min-width: 481px) {
+    .container, .container-sm {
+        padding-left: 24px;
+        padding-right: 24px
+    }
+}
+
+.container {
+    max-width: 1128px
+}
+
+.container-sm {
+    max-width: 848px
+}
+
+.container .container-sm {
+    max-width: 800px;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    word-wrap: normal !important
+}
+
+    .screen-reader-text:focus {
+        border-radius: 2px;
+        box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
+        clip: auto !important;
+        display: block;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 14px;
+        letter-spacing: 0px;
+        font-weight: 600;
+        line-height: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: #fff;
+        color: #535FD7 !important;
+        border: none;
+        height: auto;
+        left: 8px;
+        padding: 16px 32px;
+        top: 8px;
+        width: auto;
+        z-index: 100000
     }
 
-        .feature div .setence {
-            width: 23rem;
-            margin: auto;
-            font-size: 1.15rem;
-        }
+.site-footer {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    background: #182538;
+    color: #6B7A90
+}
 
-        .feature div h1 {
-            color: var(--color-text-title);
-            margin: 0 0 1rem 0;
-            font-size: 2rem;
-        }
-
-        .feature div img.icon {
-            width: 10rem;
-            height: 10rem;
-            margin: 3rem;
-        }
-
-    .feature .right {
-        float: right;
+    .site-footer a {
+        color: #6B7A90;
+        text-decoration: none
     }
 
-    .feature .left {
-        float: left;
+        .site-footer a:hover, .site-footer a:active {
+            text-decoration: underline
+        }
+
+    .site-footer::before {
+        display: none
     }
+
+.lights-off .site-footer::before {
+    display: block
+}
+
+.site-footer-inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 48px;
+    padding-bottom: 48px
+}
+
+.footer-brand, .footer-links, .footer-social-links, .footer-copyright {
+    flex: none;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center
+}
+
+.footer-brand, .footer-links, .footer-social-links {
+    margin-bottom: 24px
+}
+
+    .footer-links li + li, .footer-social-links li + li {
+        margin-left: 16px
+    }
+
+    .footer-social-links li {
+        display: inline-flex
+    }
+
+        .footer-social-links li a {
+            padding: 8px
+        }
+
+.asset-logo {
+    max-width: 2.5rem;
+}
+
+@media (min-width: 641px) {
+    .site-footer-inner {
+        justify-content: space-between;
+        padding-top: 72px;
+        padding-bottom: 72px
+    }
+
+    .footer-brand, .footer-links, .footer-social-links, .footer-copyright {
+        flex: 50%
+    }
+
+    .footer-brand, .footer-copyright {
+        justify-content: flex-start
+    }
+
+    .footer-links, .footer-social-links {
+        justify-content: flex-end
+    }
+
+    .footer-links {
+        order: 1;
+        margin-bottom: 0
+    }
+}
 
 @-webkit-keyframes GradientAnimation {
     0% {

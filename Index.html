@@ -5,6 +5,7 @@
     <title>Nexus Company</title>
     <link rel="stylesheet" href="Resources\css\index.css" />
     <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav>
@@ -12,7 +13,15 @@
             <img class="logo" src="Resources\img\nexus_logo.png" />
             <ul>
                 <li>
+                    Home
+                </li>
 
+                <li>
+                    OAuth
+                </li>
+
+                <li>
+                    Docs
                 </li>
             </ul>
         </div>
@@ -21,44 +30,141 @@
     <main>
         <section class="text">
             <h1>
-                Are you ready for a new journey?!
+                Tá pronto para começar uma história ?!
             </h1>
 
             <div class="setence">
                 <div class="content">
-                    Hey, eae? Are you ready to get started in the Nexus ? Come on, let's go! Create your account or sign in to nexus to use the best!
+                    Hey, eae! Vai ficar só pensando em descer para olhar? Escorrega ai e veja por que a Nexus vai mudar a sua/nossa história.
                 </div>
             </div>
         </section>
         <section class="read-more">
-            <p>Read More</p>
-            <img class="arrow" src="Resources\img\arrow_down.svg" class="arrow" onclick="location.href='#first-feature'"/>
+            <p>Veja mais</p>
+            <img class="arrow" src="Resources\img\arrow_down.svg" class="arrow" onclick="location.href='#singup'" />
         </section>
     </main>
 
-    <section class="content">
+    <section class="body content">
         <h1>
             Nexus Company
         </h1>
         <p>
             Nexus Company is one Startup created by Juan Douglas (Developer and Software Gestor), focused in developer mentory and softwares assitent
         </p>
-        <div class="feature" id="first-feature">
-            <div class="right">
-                <h1>
-                    Privacy and Security
-                </h1>
-                <div class="setence">
-                    At Nexus your privacy and security are our main goals, we focus our efforts to make you feel safe in our systems.
-                </div>
+    </section>
+
+    <section class="body advantages">
+        <div class="cards">
+            <div class="feature">
+                <h1> Segurança</h1>
+                <p>
+                    A Nexus se importa com sua segurança e privacidade, por isso investimos pesado em segurança cibernética. Além disso estamos constatemente testando e implementado nossos sistemas
+                </p>
             </div>
-            <div class="left">
-                <img class="icon" src="Resources/img/encrypted.png"/>
+            <div class="feature">
+                <h1>Integração</h1>
+                <p>
+                    Sabemos o quão chato é trabalhar com sistemas diferentes e que não sincronizão. Por isso todos os sistemas da Nexus trabalham em cojunto e de forma única.
+                </p>
+            </div>
+            <div class="feature">
+                <h1>Produtividade</h1>
+                <p>
+                    Nossos sistemas são focados em determinadas áreas, por isso não é necessário gastar muito tempo para integrar, dessa forma você pode focar no que faz de melhor.
+                </p>
+            </div>
+            <div class="feature">
+                <h1>Suporte</h1>
+                <p>
+                    Seu feedback é muito importante para nós! Por isso estamos sempre prontos para lhe ajudar, além disso buscamos cada vez mais aperfeiçoar nossos canais de contato com os clientes.
+                </p>
             </div>
         </div>
     </section>
 
+
     <footer>
+        <section class="singup" id="singup">
+            <div class="text">
+                <h1>Registre-se</h1>
+                <p>É sério que você vai perder essas vantagens ?</p>
+            </div>
+            <div class="buttons">
+                <button type="button" class="negative">
+                    Login
+                </button>
+                <button type="button" class="positive"
+                        class="positive" onclick="window.location.href='https://oauth.nexus-company.tech/Account/Register'">
+                    Registre-se
+                </button>
+            </div>
+        </section>
+
+        <section class="site-footer has-top-divider">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+                        <a href="#">
+                            <img class="asset-logo" src="Resources/img/nexus_crystal.png" alt="Logo">
+                        </a>
+                    </div>
+                    <ul class="footer-links list-reset">
+                        <li>
+                            <a href="/Home/Index">Home</a>
+                        </li>
+                        <li>
+                            <a href="/Home/Contact">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ's</a>
+                        </li>
+                        <li >
+                            <a href="https://wa.me/5561992503344?text=Hello%2C+I%27m+need+support+can+you+help+me%3F%21">Support</a>
+                        </li>
+                        <li>
+                            <a href="https://auth.nexus-company.tech/swagger">OAuth</a>
+                        </li>
+                        <li>
+                            <a href="/Home/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-social-links list-reset">
+                        <li >
+                            <a href="https://www.linkedin.com/company/nexuscompany">
+                                <span class="screen-reader-text">Linkedin</span>
+                                <i class="fa fa-lg fa-linkedin"> </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/company.nexus/">
+                                <span class="screen-reader-text">Instagram</span>
+                                <i class="fa fa-lg fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="https://wa.me/5561992503344?text=Hello,%20can%20you%20help%20me%20?!">
+                                <span class="screen-reader-text">Whatsapp</span>
+                                <i class="fa fa-lg fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="screen-reader-text">Twitter</span>
+                                <i class="fa fa-lg fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://docs.nexus-company.tech">
+                                <span class="screen-reader-text">Documentation</span>
+                                <i class="fa fa-lg fa-book"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-copyright">© 2022 Nexus Company, all rights reserved</div>
+                </div>
+            </div>
+        </section>
     </footer>
 </body>
 </html>
