@@ -102,9 +102,9 @@ main {
         }
 
             main section.text h1 {
-                font-family: 'Heebo Bold';
                 font-size: 2.7rem;
                 margin: 1.3rem;
+                color: white;
             }
 
             main section.text .setence {
@@ -125,6 +125,7 @@ main {
 
             main section.read-more p {
                 margin: 0;
+                color: white;
             }
 
             main section.read-more img.arrow {
@@ -140,7 +141,7 @@ main {
                 }
 
 section.body {
-    margin: 0 5rem;
+    margin: 0 5%;
 }
 
 section.advantages div.cards {
@@ -149,6 +150,20 @@ section.advantages div.cards {
     flex-wrap: wrap;
     margin: 1rem;
 }
+
+section.advantages .header {
+    text-align: center;
+}
+
+    section.advantages .header h1 {
+        font-size: xxx-large;
+    }
+
+    section.advantages .header p {
+        max-width: 35rem;
+        margin: 1rem auto 3rem auto;
+        font-size: larger;
+    }
 
 div.cards .feature {
     max-width: 13rem;
@@ -278,6 +293,61 @@ footer {
     padding-right: 0
 }
 
+.content-divided {
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .content-divided .content {
+        width: 50%;
+        min-width: 15rem;
+        padding: 2.5rem 0;
+        text-align: center;
+    }
+
+        .content-divided .content.right {
+        }
+
+        .content-divided .content.left {
+        }
+
+        .content-divided .content h1 {
+            font-size: 1.8rem;
+        }
+
+        .content-divided .content p {
+            max-width: 21rem;
+            margin: 1.25rem auto;
+            font-size: 1.075rem;
+        }
+
+h1, h2, h3, h4, h5 {
+    color: var(--color-text-title);
+    font-family: 'Heebo Bold';
+    margin: .5rem;
+}
+
+p {
+    font-family: 'Heebo Regular';
+    font-weight: 200;
+    color: var(--color-text-setence);
+}
+
+    p span {
+        background: var(--color-secondary);
+        color: white;
+        padding: 0 .2rem;
+        font-family: 'Heebo Thin';
+        font-weight: 600; 
+        font-size: 1.055rem;
+        font-style: italic;
+        margin: 0 .125rem;
+    }
+
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
@@ -324,7 +394,8 @@ footer {
     }
 
         .site-footer a:hover, .site-footer a:active {
-            text-decoration: underline
+            text-decoration: none;
+            color: navajowhite;
         }
 
     .site-footer::before {
