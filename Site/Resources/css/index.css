@@ -1,6 +1,6 @@
 :root {
-    --color-secondary: #257470;
-    --color-primary: #08ac4b;
+    --color-secondary: #19504e;
+    --color-primary: #058b3c;
     --color-error: red;
     --card-radius: .75rem;
     --color-text-title: #182538;
@@ -317,6 +317,7 @@ footer {
 
         .content-divided .content h1 {
             font-size: 1.8rem;
+            color: var(--color-secondary);
         }
 
         .content-divided .content p {
@@ -338,7 +339,7 @@ p {
 }
 
     p span {
-        background: var(--color-secondary);
+        background: var(--color-primary);
         color: white;
         padding: 0 .2rem;
         font-family: 'Heebo Thin';
