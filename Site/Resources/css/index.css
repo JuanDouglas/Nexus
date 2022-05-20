@@ -71,15 +71,15 @@ nav {
 main {
     background: linear-gradient(121deg, var(--color-secondary), #102C57);
     background-size: 600% 600%;
+    -webkit-animation: GradientAnimation 12s ease infinite;
+    -moz-animation: GradientAnimation 12s ease infinite;
+    -o-animation: GradientAnimation 12s ease infinite;
+    animation: GradientAnimation 12s ease infinite;
     height: 80%;
     min-width: 100%;
     text-align: center;
     position: relative;
     padding: 15% 0 7rem 0;
-    -webkit-animation: GradientAnimation 12s ease infinite;
-    -moz-animation: GradientAnimation 12s ease infinite;
-    -o-animation: GradientAnimation 12s ease infinite;
-    animation: GradientAnimation 12s ease infinite;
 }
 
     main::before {
@@ -151,19 +151,22 @@ section.advantages div.cards {
     margin: 1rem;
 }
 
-section.advantages .header {
+section.advantages .header,
+section.advantages .contact {
     text-align: center;
 }
 
-    section.advantages .header h1 {
-        font-size: xxx-large;
+    section.advantages .header h1,
+    section.advantages .contact {
+        font-size: xx-large;
     }
 
-    section.advantages .header p {
-        max-width: 35rem;
-        margin: 1rem auto 3rem auto;
-        font-size: larger;
-    }
+        section.advantages .header p,
+        section.advantages .contact p {
+            max-width: 35rem;
+            margin: 1rem auto 3rem auto;
+            font-size: large;
+        }
 
 div.cards .feature {
     max-width: 13rem;
@@ -295,7 +298,7 @@ footer {
 
 .content-divided {
     width: 100%;
-    max-width: 70rem;
+    max-width: 65rem;
     margin: 0 auto !important;
     display: flex;
     justify-content: center;
@@ -316,7 +319,7 @@ footer {
         }
 
         .content-divided .content h1 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--color-secondary);
         }
 
@@ -325,6 +328,33 @@ footer {
             margin: 1.25rem auto;
             font-size: 1.075rem;
         }
+
+        .content-divided .content.background-gradient {
+            background: linear-gradient(121deg, var(--color-secondary), #102C57);
+            background-size: 600% 600%;
+            -webkit-animation: GradientAnimation 3s ease infinite;
+            -moz-animation: GradientAnimation 3s ease infinite;
+            -o-animation: GradientAnimation 3s ease infinite;
+            animation: GradientAnimation 3s ease infinite;
+            padding: 0 !important;
+        }
+
+            .content-divided .content.background-gradient .ocutor {
+                background-image: url(../img/blob-scene.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                min-height: 14rem;
+                padding: 1rem !important;
+                display: flex;
+                justify-content: center;
+            }
+
+                .content-divided .content.background-gradient .ocutor img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    display: block;
+                    margin: 0 auto;
+                }
 
 h1, h2, h3, h4, h5 {
     color: var(--color-text-title);
@@ -343,10 +373,17 @@ p {
         color: white;
         padding: 0 .2rem;
         font-family: 'Heebo Thin';
-        font-weight: 600; 
+        font-weight: 600;
         font-size: 1.055rem;
         font-style: italic;
         margin: 0 .125rem;
+    }
+
+    p b {
+        color: var(--color-primary);
+        font-family: 'Heebo Bold';
+        font-weight: 300;
+        text-transform: uppercase;
     }
 
 .screen-reader-text {
