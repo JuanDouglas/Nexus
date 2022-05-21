@@ -29,6 +29,10 @@ $(function () {
     });
 
     nextCarousel();
+
+    document
+        .getElementById('video-mockup')
+        .play();
 });
 
 function more() {
