@@ -333,19 +333,20 @@ footer {
 }
 
 .carousel .image {
-    filter: grayscale(100%);
+    filter: grayscale(87%);
     margin: 1.5rem 1rem;
     padding: 0 .5rem;
     transition: .45s;
 }
 
-.carousel .image:hover {
+.carousel .image:hover,
+.carousel .image.focus {
     filter: none;
     margin: 1.5rem;
     cursor: pointer;
     padding: 0;
     transform: perspective(3.5rem) translate3d(0, 0, 10px);
-    transition: .45s ease;
+    transition: .35s ease;
 }
 
 .content-divided {

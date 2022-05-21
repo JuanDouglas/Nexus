@@ -1,4 +1,3 @@
-var actualCarousel = 0;
 var latters = ["preparado", "pronto", "apto", ""];
 
 $(function () {
@@ -28,6 +27,8 @@ $(function () {
             list[i].showing = mostrando;
         });
     });
+
+    nextCarousel();
 });
 
 function more() {
@@ -43,7 +44,30 @@ function seen() {
 }
 
 function nextCarousel() {
+    let images = $('.carousel .image');
+    let last = 0;
 
+    for (var i = 0; i < images.length; i++) {
+        let focus = $($('.carousel .image')[i])
+            .hasClass('focus');
+
+        if (focus) {
+            last = i;
+            break;
+        }
+    }
+
+    last += 1;
+
+    if (last == images.length)
+        last = 0;
+
+    images.removeClass('focus');
+
+    $(images[last])
+        .addClass('focus');
+
+    setTimeout(nextCarousel, 2000);
 }
 
 var sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
