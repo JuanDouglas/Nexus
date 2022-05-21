@@ -1,4 +1,4 @@
-var latters = ["preparado", "pronto", "apto", ""];
+var latters = ["preparado", "pronto", "apto"];
 
 $(function () {
     var list = [];
