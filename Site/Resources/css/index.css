@@ -177,13 +177,21 @@ section.contact .left img {
     margin: 0 auto;
 }
 
-section.contact .content.right {
+.content.slide {
     opacity: 0;
+    z-index: 1;
 }
 
-section.contact .content.right.show {
-    animation: LeftToRightAnimation .7s ease;
+.content.show {
     opacity: 1;
+}
+
+.content.right.show {
+    animation: LeftToRightAnimation .7s ease;
+}
+
+.content.left.show {
+    animation: RightToLeftAnimation .7s ease;
 }
 
 div.cards .feature {
@@ -364,6 +372,7 @@ footer {
     min-width: 15rem;
     padding: 2.5rem 0;
     text-align: center;
+    z-index: 10;
 }
 
 .content-divided .content.right {}
@@ -667,6 +676,20 @@ b {
         opacity: 0;
         filter: blur(10px);
         transform: translate(-100%, 0);
+    }
+
+    100% {
+        filter: none;
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes RightToLeftAnimation {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translate(100%, 0);
     }
 
     100% {

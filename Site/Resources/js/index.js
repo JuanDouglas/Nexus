@@ -1,22 +1,31 @@
 var actualCarousel = 0;
-
+var latters = ["preparado", "pronto", ""]
 $(function () {
-    var contact = $('.contact .right');
-    var showing = false;
-    var area1 = contact.offset().top - $(window).height() + (contact.height() / 2);
     var list = [];
 
-    $('p span').each(function (i, obj) {
-        list.push(obj);
+    $('.slide').each(function (i, obj) {
+        var area = $(obj).offset().top - $(window).height() + ($(obj).height() / 2);
+        list.push({
+            obj: obj,
+            showing: $(window).scrollTop() > area
+        });
     });
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > area1) {
-            contact.addClass('show');
-            showing = true;
-        } else if (showing) {
-            contact.removeClass('show');
-        }
+        list.forEach(function (obj, i) {
+            var html = $(obj.obj);
+            var area = html.offset().top - $(window).height();
+            let emTela = $(window).scrollTop() > area;
+            let mostrando = html.hasClass('show');
+
+            if (obj.showing == false && emTela) {
+                html.addClass('show');
+            } else if (emTela == false) {
+                html.removeClass('show');
+            }
+
+            list[i].showing = mostrando;
+        });
     });
 });
 
@@ -28,7 +37,10 @@ function nextCarousel() {
 
 }
 
-function animateSpan(span) {
+var sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
+function animateSpan(span, text) {
+    new Promise(async function () {
 
+    });
 }
