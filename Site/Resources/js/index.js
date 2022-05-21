@@ -1,5 +1,6 @@
 var actualCarousel = 0;
-var latters = ["preparado", "pronto", ""]
+var latters = ["preparado", "pronto", "apto", ""];
+
 $(function () {
     var list = [];
 
@@ -30,7 +31,15 @@ $(function () {
 });
 
 function more() {
+    $('html, body').animate({
+        scrollTop: $("#contact").offset().top
+    }, 750);
+}
 
+function seen() {
+    $('html, body').animate({
+        scrollTop: $("#advantages").offset().top - 60
+    }, 750);
 }
 
 function nextCarousel() {
