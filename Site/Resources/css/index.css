@@ -185,7 +185,7 @@ div.cards .feature {
     max-width: 13rem;
     text-align: center;
     padding: 1rem .5rem;
-    background: #e5e5e5;
+    background: #efefef;
     border-radius: 1rem;
     box-shadow: 0px 10px 42px -16px rgba(0,0,0,0.75);
     margin: .5rem;
@@ -310,6 +310,29 @@ footer {
     padding-right: 0
 }
 
+.carousel {
+    display: inline-flex;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
+
+    .carousel .image {
+        filter: grayscale(100%);
+        margin: 1.5rem 1rem;
+        padding: 0 .5rem;
+    }
+
+        .carousel .image:hover {
+            filter: none;
+            margin: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            transform: perspective(3.5rem) translate3d(0, 0, 10px);
+            transition: .45s ease;
+        }
+
 .content-divided {
     width: 100%;
     max-width: 65rem;
@@ -319,8 +342,16 @@ footer {
     align-items: center;
 }
 
+    .content-divided .divider {
+        width: 2%;
+        max-width: .4rem;
+        height: 30rem;
+        background: var(--color-secondary);
+        border-radius: 1rem;
+    }
+
     .content-divided .content {
-        width: 50%;
+        width: 49%;
         min-width: 15rem;
         padding: 2.5rem 0;
         text-align: center;
