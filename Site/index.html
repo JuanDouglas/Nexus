@@ -10,34 +10,46 @@
 <body>
     <nav>
         <div class="content">
-            <img class="logo" src="Resources\img\nexus_logo.png" />
+            Nexus Company
         </div>
     </nav>
 
     <main>
         <section class="text">
             <h1>
-                Está pronto para começar ?!
+                Está <span>pronto</span> para começar ?!
             </h1>
 
-            <div class="setence">
-                <div class="content">
-                    Escorrega ai e veja por que a Nexus vai mudar a sua/nossa história.
-                </div>
-            </div>
+            <p class="content">
+                Escorrega ai e veja por que a <b>Nexus</b> vai mudar a sua/nossa história.
+            </p>
         </section>
         <section class="read-more">
             <p>Veja mais</p>
-            <img class="arrow" src="Resources\img\arrow_down.svg" onclick="location.href='#saber-mais'" />
+            <img class="arrow" src="Resources\img\arrow_down.svg" onclick="more()" />
         </section>
     </main>
 
     <section class="body">
         <div class="content-divided">
+            <div class="content left background-gradient">
+                <div class="ocutor extreme">
+                    <img src="Resources\img\responsive-design.svg" width="125rem" />
+                </div>
+            </div>
+            <div class="content right">
+                <h1>Fullstack</h1>
+                <p>Desenvolvemos para <span>todas</span> as plataformas, dessa forma seu <b>app</b> será acessado em <span>todos</span> dispositivos.</p>
+                <button type="button" class="negative" onclick="more()">
+                    Saiba mais
+                </button>
+            </div>
+        </div>
+        <div class="content-divided">
             <div class="content left">
                 <h1>Nossos preços</h1>
                 <p>Focamos em <b>sempre</b> entregar o <span> melhor resultado</span> com o <span> menor custo </span> possível para todos os nossos parceiros.</p>
-                <button type="button" class="positive" onclick="window.location.href='https://wa.me/5561992503344'">
+                <button type="button" class="positive" onclick="more()">
                     Saiba mais
                 </button>
             </div>
@@ -49,14 +61,14 @@
         </div>
         <div class="content-divided">
             <div class="content left background-gradient">
-                <div class="ocutor">
+                <div class="ocutor normal">
                     <img src="Resources\img\experiencia.svg" width="125rem" />
                 </div>
             </div>
             <div class="content right">
                 <h1>Start up</h1>
                 <p>Somos novos na área empresarial, porém temos total <span>experiência</span> e conhecimento na área de desenvolvimento.</p>
-                <button type="button" class="negative" onclick="window.location.href='https://wa.me/5561992503344'">
+                <button type="button" class="negative" onclick="more()">
                     Saiba mais
                 </button>
             </div>
@@ -74,42 +86,58 @@
             <div class="feature">
                 <h1> Segurança</h1>
                 <p>
-                    A Nexus se importa com sua segurança e privacidade, por isso investimos pesado em segurança cibernética. Além disso estamos constatemente testando e implementado nossos sistemas
+                    Investimos pesado na <span>segurança</span> de nossos sistemas. Além disso sempre estamos depurando para encontrar falhas ou vulnerabilidades.
                 </p>
             </div>
             <div class="feature">
                 <h1>Integração</h1>
                 <p>
-                    Sabemos o quão chato é trabalhar com sistemas diferentes e que não sincronizão. Por isso todos os sistemas da Nexus trabalham em cojunto e de forma única.
+                    Os sistemas da <b>Nexus</b> são feitos para trabalharem juntos com um <span>único</span> sistema.
                 </p>
             </div>
             <div class="feature">
                 <h1>Produtividade</h1>
                 <p>
-                    Nossos sistemas são focados em determinadas áreas, por isso não é necessário gastar muito tempo para integrar, dessa forma você pode focar no que faz de melhor.
+                    Queremos que você se concetre apenas no que gosta de fazer.
                 </p>
             </div>
             <div class="feature">
                 <h1>Suporte</h1>
                 <p>
-                    Seu feedback é muito importante para nós! Por isso estamos sempre prontos para lhe ajudar, além disso buscamos cada vez mais aperfeiçoar nossos canais de contato com os clientes.
+                    Nosso suporte está sempre prontos para auxiliar você caso tenha algum problema!
                 </p>
             </div>
         </div>
-        <div class="contact">
+    </section>
+
+    <section class="body tecnologis">
+        <div class="header">
+            <h1>Tecnologias</h1>
+            <p>
+                A <b>Nexus</b> é <span>fullstack</span> e utiliza tecnologias da <span>Microsoft</span>, trazendo a você <span>qualidade</span> em todas as fases do desenvolvimento.
+            </p>
+        </div>
+    </section>
+
+    <section class="body contact" id="contact">
+        <div class="header">
             <h1>Entrar em contato</h1>
             <p>
                 Precisa de ajuda para <span> elaborar </span> ou <span> construir </span> seu projeto ? Entre em contato conosco que iremos tirar seu sonho do papel.
             </p>
-            <div class="content-divided">
-                <div class="content left">
-                    <img src="Resources\img\whatsapp-business.svg" width="300rem" />
-                </div>
-                <div class="content right">
-                    <button type="button" class="positive" onclick="window.location.href='https://wa.me/5561992503344'">
-                        Conversar
-                    </button>
-                </div>
+        </div>
+        <div class="content-divided">
+            <div class="content left">
+                <img src="Resources\img\mobile-contact.gif" width="250rem" />
+            </div>
+            <div class="content right">
+                <h1>Ficou com dúvidas?</h1>
+                <p>
+                    Entre em contato conosco pelo <b>Whatsapp</b> para tirarmos todas as suas dúvidas.
+                </p>
+                <button type="button" class="positive" onclick="window.location.href='https://wa.me/5561992503344'">
+                    Conversar
+                </button>
             </div>
         </div>
     </section>
