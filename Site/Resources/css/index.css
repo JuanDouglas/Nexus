@@ -93,9 +93,9 @@ main::before {
     z-index: 0;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 640px) {
     main::before {
-        height: 8.3rem;
+        height: 7.3rem;
     }
 }
 
@@ -305,17 +305,7 @@ footer {
 .container-sm {
     width: 100%;
     margin: 0 auto;
-    padding-left: 16px;
-    padding-right: 16px
-}
-
-@media (min-device-width: 481px) {
-
-    .container,
-    .container-sm {
-        padding-left: 24px;
-        padding-right: 24px
-    }
+    padding: 0 !important;
 }
 
 .container {
@@ -586,10 +576,6 @@ b {
         width: 100%;
         margin: 0 3rem 0rem 0rem;
         padding: 0;
-    }
-
-    .container {
-        padding: 0 !important;
     }
 }
 
