@@ -261,15 +261,6 @@ section.singup div.buttons {
     display: inline-flex;
 }
 
-@media screen and (min-width: 820px) {
-    section.singup {
-        display: inline-block;
-    }
-
-    section.singup div.text {}
-}
-
-
 button {
     font-size: 1rem;
     font-family: 'Heebo Regular';
@@ -347,6 +338,7 @@ footer {
     text-align: center;
     margin: auto;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .carousel .image {
@@ -582,7 +574,26 @@ b {
     max-width: 2.5rem;
 }
 
-@media screen and (min-device-width: 641px) and (min-width: 1200px) {
+@media (max-width: 860px) {
+    section.singup {
+        display: inline-block;
+        margin: 0rem -4rem 0rem 0rem;
+        text-align: center;
+    }
+
+    section.singup div.text {
+        text-align: center;
+        width: 100%;
+        margin: 0 3rem 0rem 0rem;
+        padding: 0;
+    }
+
+    .container {
+        padding: 0 !important;
+    }
+}
+
+@media screen and (min-device-width: 641px) and (min-width: 860px) {
     .site-footer-inner {
         justify-content: space-between;
         padding-top: 72px;
