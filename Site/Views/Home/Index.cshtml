@@ -1,0 +1,161 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<link href="~/css/auxiliary/particles.css" rel="stylesheet">
+<script src="~/js/auxiliary/particles.js"></script>
+
+<main>
+    <section class="text">
+        <h1>
+            Está <span id="word">pronto</span> para começar ?!
+        </h1>
+
+        <p class="content">
+            Escorrega ai e veja por que a <b>Nexus</b> vai mudar a sua/nossa história.
+        </p>
+    </section>
+    <section class="read-more">
+        <p>Veja mais</p>
+        <img class="arrow" src="~\img\arrow-down-navigation.svg" onclick="seen()">
+    </section>
+</main>
+
+<section class="body" id="content">
+    <div class="content-divided reverse">
+        <div class="content left slide show">
+            <h1>Qualidade</h1>
+            <p>Queremos sempre trazer <span>qualidade</span> no desenvolvimento de softwares, por isso <span>não focomos no lucro</span>.</p>
+            <button type="button" class="positive" onclick="more()">
+                Saiba mais
+            </button>
+        </div>
+        <div class="content right background-gradient">
+            <div class="ocutor">
+                <img src="~/img/icon-quality.svg" width="125rem">
+            </div>
+        </div>
+    </div>
+    <div class="content-divided">
+        <div class="content left background-gradient">
+            <div class="ocutor extreme">
+                <img src="~\img\responsive-design.svg" width="125rem">
+            </div>
+        </div>
+        <div class="content right slide">
+            <h1>Fullstack</h1>
+            <p>
+                Desenvolvemos para <span>todas</span> as plataformas, dessa forma seu <b>app</b> será acessado em
+                <span>todos</span> dispositivos.
+            </p>
+            <button type="button" class="negative" onclick="more()">
+                Saiba mais
+            </button>
+        </div>
+    </div>
+    <div class="content-divided reverse">
+        <div class="content left slide">
+            <h1>Nossos preços</h1>
+            <p>
+                Focamos em <b>sempre</b> entregar o <span> melhor resultado</span> com o <span> menor custo </span>
+                possível para todos os nossos parceiros.
+            </p>
+            <button type="button" class="positive" onclick="more()">
+                Saiba mais
+            </button>
+        </div>
+        <div class="content right background-gradient">
+            <div class="ocutor">
+                <img src="~/img/preco-baixo.svg" width="125rem">
+            </div>
+        </div>
+    </div>
+    <div class="content-divided">
+        <div class="content left background-gradient">
+            <div class="ocutor normal">
+                <img src="~/img/experiencia.svg" width="125rem">
+            </div>
+        </div>
+        <div class="content right slide">
+            <h1>Start up</h1>
+            <p>
+                Somos novos na área empresarial, porém temos total <span>experiência</span> e conhecimento na área de
+                desenvolvimento.
+            </p>
+            <button type="button" class="negative" onclick="more()">
+                Saiba mais
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="body advantages" id="advantages">
+    <div class="header">
+        <h1 id="saber-mais">Por que a Nexus ?</h1>
+        <p>
+            A <b>Nexus</b> está pronta para <span>começar a crescer</span> junto com você, veja abaixo por que temos
+            certeza disso:
+        </p>
+    </div>
+    <div class="cards">
+        <div class="feature">
+            <h1>Segurança</h1>
+            <p>
+                Investimos pesado na <span>segurança</span> de nossos sistemas. Além disso sempre estamos depurando
+                para encontrar falhas ou vulnerabilidades.
+            </p>
+        </div>
+        <div class="feature">
+            <h1>Integração</h1>
+            <p>
+                Os sistemas da <b>Nexus</b> são feitos para trabalharem juntos com um <span>único</span> sistema.
+            </p>
+        </div>
+        <div class="feature">
+            <h1>Produtividade</h1>
+            <p>
+                Queremos que você se concetre <span>apenas</span> no que <b>gosta de fazer</b>. Estamos sempre desenvolvendo soluções para auxiliar você.
+            </p>
+        </div>
+        <div class="feature">
+            <h1>Suporte</h1>
+            <p>
+                A <b>Nexus</b> se preocupa com sua satisfação, por isso nosso suporte está <span>sempre</span> pronto para auxiliar você caso tenha algum problema!
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="body contact">
+    <div class="particle-container"></div>
+    <div class="content">
+        <div class="header">
+            <h1 id="contact">Chegou a hora!</h1>
+            <p>
+                Pare de ficar apenas imaginado! Entre em contato conosco para mostramos com vamos torna seu sonho em realidade.
+            </p>
+        </div>
+
+        <div class="contact-form">
+            <form action="enviar_contato.php" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="João Aguiar Fernandes" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+
+                <label for="empresa">Empresa:</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nexus Company">
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Conte-nos um pouco mais sobre o seu projeto..." required></textarea>
+
+                <div class="h-captcha" data-sitekey="3a18a3b1-f2c7-4f9c-aefe-8c37a1455ca7" data-theme="dark">
+                </div>
+
+                <button type="submit" class="positive">
+                    Entrar em Contato
+                </button>
+            </form>
+        </div>
+        <!-- <img src="Resources/img/hero-glow.svg" class="hero-glow"> -->
+    </div>
+</section>

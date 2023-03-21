@@ -1,0 +1,123 @@
+:root {
+    --color-secondary: #058b3c;
+    --color-primary: #19504e;
+    --color-error: red;
+    --color-footer: #182538;
+    --card-radius: .75rem;
+    --color-text-title: #182538;
+    --color-text-setence: #6B7A90;
+    --color-fg: #404d64;
+    --transparent-bg: #bdf9f914;
+    --transparent-bg-dark: #0000002e;
+    --color-bg-ultra-dark: #0e141e;
+}
+
+@font-face {
+    font-family: 'Heebo Thin';
+    font-weight: 500;
+    src: url(../font/Heebo/Heebo-Thin.ttf)
+}
+
+@font-face {
+    font-family: 'Heebo Regular';
+    font-weight: 500;
+    src: url(../font/Heebo/Heebo-Regular.ttf)
+}
+
+@font-face {
+    font-family: 'Heebo Bold';
+    font-weight: 500;
+    src: url(../font/Heebo/Heebo-Bold.ttf)
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+.content-divided {
+    width: 100%;
+    margin: 1.2rem auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+    .content-divided.reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    .content-divided .divider {
+        width: 2%;
+        max-width: .4rem;
+        height: 25rem;
+        background: var(--color-secondary);
+        border-radius: 1rem;
+    }
+
+    .content-divided .content {
+        width: 49%;
+        min-width: 500px;
+        max-width: 25rem;
+        padding: 2.5rem 0;
+        text-align: center;
+        z-index: 10;
+    }
+
+        .content-divided .content h1 {
+            font-size: xx-large;
+            color: var(--color-secondary);
+        }
+
+        .content-divided .content p {
+            max-width: 21rem;
+            margin: 1.25rem auto;
+            font-size: large;
+        }
+
+        .content-divided .content.background-gradient {
+            background: linear-gradient(121deg, var(--color-secondary), #102C57);
+            background-size: 600% 600%;
+            -webkit-animation: GradientAnimation 3s ease infinite;
+            -moz-animation: GradientAnimation 3s ease infinite;
+            -o-animation: GradientAnimation 3s ease infinite;
+            animation: GradientAnimation 3s ease infinite;
+            padding: 0 !important;
+        }
+
+            .content-divided .content.background-gradient .ocutor {
+                background-image: url(../img/blob-scene.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                min-height: 14rem;
+                padding: 1rem !important;
+                display: flex;
+                justify-content: center;
+            }
+
+                .content-divided .content.background-gradient .ocutor img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    display: block;
+                    margin: 0 auto;
+                }
