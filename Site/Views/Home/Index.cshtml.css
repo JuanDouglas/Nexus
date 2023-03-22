@@ -1,4 +1,4 @@
-﻿main {
+﻿.main {
     background: linear-gradient(121deg, var(--color-secondary), #102C57);
     background-size: 600% 600%;
     -webkit-animation: GradientAnimation 12s ease infinite;
@@ -12,7 +12,7 @@
     z-index: 2;
 }
 
-    main::before {
+    .main::before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -24,11 +24,11 @@
         z-index: 0;
     }
 
-    main section {
+    .main section {
         color: white;
     }
 
-        main section.text p {
+        .main section.text p {
             max-width: 28rem;
             margin: auto;
             font-family: 'Heebo Thin';
@@ -36,39 +36,28 @@
             color: white;
         }
 
-        main section.text h1 {
+        .main section.text h1 {
             font-size: 2.7rem;
             margin: 1.3rem;
             color: white;
         }
 
-            main section.text h1 span {
+            .main section.text h1 span {
                 font-size: 2.8rem;
             }
 
-        main section.read-more {
+        .main section.read-more {
             margin-top: 5rem;
         }
 
-            main section.read-more p {
+            .main section.read-more p {
                 margin: 0;
                 color: white;
             }
 
-            main section.read-more img.arrow {
-                width: 3.5em;
-                margin: 0;
-                animation: MoreArrowAnimation 1.3s cubic-bezier(0.61, 0.01, 0.49, 0.8) infinite;
-            }
-
-                main section.read-more img.arrow:hover {
-                    transform: perspective(6rem);
-                    cursor: pointer;
-                    animation: none;
-                }
-
 section.body {
     margin: 0 1.5%;
+    overflow: hidden;
 }
 
 section.advantages div.cards {
@@ -136,96 +125,6 @@ div.cards .feature {
     margin-bottom: 2.5rem;
 }
 
-section.singup {
-    display: inline-flex;
-    max-width: 50rem;
-    border-radius: .8rem;
-    text-align: left;
-    padding: .95rem;
-    box-shadow: 0px 10px 38px 3px rgb(0 0 0 / 60%);
-    margin-top: 6rem;
-    margin-bottom: -1rem;
-    background: white;
-}
-
-    section.singup div {
-        min-width: fit-content;
-    }
-
-        section.singup div.text {
-            width: 60%;
-            padding: 0 6rem 0 1rem;
-        }
-
-            section.singup div.text h2 {
-                margin: 0;
-                color: var(--color-text-title);
-            }
-
-            section.singup div.text p {
-                color: var(--color-text-setence);
-                margin: .1rem 0;
-            }
-
-        section.singup div.buttons {
-            width: 40%;
-            padding-top: 1%;
-            display: inline-flex;
-        }
-
-button {
-    font-size: 1rem;
-    font-family: 'Heebo Regular';
-    padding: .5rem 2.5rem;
-    cursor: pointer;
-    min-width: 8.5rem;
-    margin: .25rem;
-    height: fit-content;
-    transition: .2s ease;
-    border-radius: .25rem !important;
-}
-
-    button:hover {
-        box-shadow: 0px 1px 22px 2px #08ac52c4;
-        transform: perspective(7rem) translate3d(0, 0, .25rem);
-    }
-
-    button.positive {
-        background: linear-gradient(45deg, var(--color-secondary), #08ac4b);
-        border: none;
-        outline: none;
-        color: white;
-    }
-
-    button.negative {
-        border-color: var(--color-secondary);
-        border-width: 1px;
-        color: var(--color-secondary);
-        border-style: solid;
-        background: transparent;
-    }
-
-.container,
-.container-sm {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 !important;
-}
-
-.container {
-    max-width: 1128px
-}
-
-.container-sm {
-    max-width: 848px
-}
-
-.container .container-sm {
-    max-width: 800px;
-    padding-left: 0;
-    padding-right: 0
-}
-
 .carousel {
     display: inline-flex;
     width: 100%;
@@ -258,42 +157,6 @@ button {
 
 .ocutor.extreme {
     background-image: url(../img/blob-scene-2.png) !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    color: var(--color-text-title);
-    font-family: 'Heebo Bold';
-    margin: .5rem;
-}
-
-p {
-    font-family: 'Heebo Regular';
-    font-weight: 200;
-    color: var(--color-text-setence);
-}
-
-span {
-    background: var(--color-primary);
-    color: white;
-    padding: 0 .2rem;
-    font-family: 'Heebo Thin';
-    font-weight: 600;
-    font-size: 1.055rem;
-    font-style: italic;
-    margin: 0 .125rem;
-    /*
-    animation: SpanTextAnimation 4s ease infinite;*/
-}
-
-b {
-    color: var(--color-primary);
-    font-family: 'Heebo Bold';
-    font-weight: 300;
-    text-transform: uppercase;
 }
 
 .screen-reader-text {
@@ -481,7 +344,7 @@ section.contact {
     }
 
     section.contact .header {
-        margin-top: 1rem;
+        margin-top: 0;
     }
 
         section.contact .header h1 {
@@ -495,7 +358,7 @@ section.contact {
         }
 
     section.contact .content {
-        margin-top: -4.5rem;
+        margin-top: -5.5rem;
         padding: 3rem 0 1rem 0;
         overflow-x: hidden;
     }
@@ -533,32 +396,6 @@ section.contact {
             display: inline-grid;
         }
 
-        section.contact .contact-form input,
-        section.contact .contact-form textarea {
-            background: var(--transparent-bg-dark);
-            color: white;
-            border-color: #404d64;
-            border-width: 1px;
-            border-style: solid;
-            max-width: 15rem;
-            padding: .35rem;
-            border-radius: .4rem;
-            outline: none;
-        }
-
-            section.contact .contact-form input:focus {
-                border-color: var(--color-secondary);
-                transition: 0.2s;
-                box-shadow: 0px 1px 12px 1px #08ac4b;
-            }
-
-        section.contact .contact-form textarea {
-            min-width: 10rem;
-            width: 30rem;
-            max-width: 100%;
-            min-height: 10rem;
-        }
-
 img.hero-glow {
     top: 15%;
     left: 50%;
@@ -580,4 +417,17 @@ img.hero-glow {
     section.contact::before {
         height: 7.3rem;
     }
+}
+
+span {
+    background: var(--color-primary);
+    color: white;
+    padding: 0 .2rem;
+    font-family: 'Heebo Thin';
+    font-weight: 600;
+    font-size: 1.055rem;
+    font-style: italic;
+    margin: 0 .125rem;
+    /*
+    animation: SpanTextAnimation 4s ease infinite;*/
 }

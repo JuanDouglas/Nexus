@@ -1,6 +1,11 @@
+using BenjaminAbt.HCaptcha.AspNetCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services
+    .AddControllersWithViews();
+
 var supportedCultures = new[] { "pt-BR", "en-US" };
 
 builder.Services
@@ -9,6 +14,9 @@ builder.Services
        .AddSupportedCultures(supportedCultures)
        .AddSupportedUICultures(supportedCultures))
        .AddRazorPages();
+
+builder.Services
+    .AddHCaptcha(builder.Configuration.GetSection("HCaptcha"));
 
 var app = builder.Build();
 

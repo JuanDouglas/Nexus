@@ -1,9 +1,12 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Nexus.Web.Models.Contact
 
 <link href="~/css/auxiliary/particles.css" rel="stylesheet">
 <script src="~/js/auxiliary/particles.js"></script>
+<script src="~/js/index.js"></script>
+<script src="https://hcaptcha.com/1/api.js" async defer></script>
 
-<main>
+<div class="main">
     <section class="text">
         <h1>
             Está <span id="word">pronto</span> para começar ?!
@@ -15,9 +18,9 @@
     </section>
     <section class="read-more">
         <p>Veja mais</p>
-        <img class="arrow" src="~\img\arrow-down-navigation.svg" onclick="seen()">
+        <img class="arrow" src="~/img/arrow-down-navigation.svg" onclick="seen()">
     </section>
-</main>
+</div>
 
 <section class="body" id="content">
     <div class="content-divided reverse">
@@ -37,7 +40,7 @@
     <div class="content-divided">
         <div class="content left background-gradient">
             <div class="ocutor extreme">
-                <img src="~\img\responsive-design.svg" width="125rem">
+                <img src="~/img/responsive-design.svg" width="125rem">
             </div>
         </div>
         <div class="content right slide">
@@ -135,20 +138,20 @@
         </div>
 
         <div class="contact-form">
-            <form action="enviar_contato.php" method="POST">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="João Aguiar Fernandes" required>
+            <form asp-action="Contact" style="display:inline-grid;">
+                <label for="Name">Nome:</label>
+                <input asp-for="Name" placeholder="João Aguiar Fernandes" required>
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                <label for="Email">E-mail:</label>
+                <input asp-for="Email" placeholder="example@domain.com" required>
 
-                <label for="empresa">Empresa:</label>
-                <input type="text" id="empresa" name="empresa" placeholder="Nexus Company">
+                <label for="Company">Empresa:</label>
+                <input asp-for="Company" placeholder="Nexus Company">
 
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Conte-nos um pouco mais sobre o seu projeto..." required></textarea>
+                <label for="mensagem">Seu projeto:</label>
+                <textarea asp-for="Project" placeholder="Conte-nos um pouco mais sobre o seu projeto..." required></textarea>
 
-                <div class="h-captcha" data-sitekey="3a18a3b1-f2c7-4f9c-aefe-8c37a1455ca7" data-theme="dark">
+                <div class="h-captcha" data-sitekey="@ViewBag.hCaptchaKey" data-theme="dark">
                 </div>
 
                 <button type="submit" class="positive">

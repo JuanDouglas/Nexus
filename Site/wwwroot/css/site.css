@@ -2,7 +2,7 @@
     --color-secondary: #058b3c;
     --color-primary: #19504e;
     --color-error: red;
-    --color-footer: #182538;
+    --color-footer: #151e2d;
     --card-radius: .75rem;
     --color-text-title: #182538;
     --color-text-setence: #6B7A90;
@@ -31,28 +31,27 @@
 }
 
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    background: var(--color-footer);
 }
-
 
 .content-divided {
     width: 100%;
@@ -121,3 +120,117 @@ body {
                     display: block;
                     margin: 0 auto;
                 }
+
+button {
+    font-size: 1rem;
+    font-family: 'Heebo Regular';
+    padding: .5rem 2.5rem;
+    cursor: pointer;
+    min-width: 8.5rem;
+    margin: .25rem;
+    height: fit-content;
+    transition: .2s ease;
+    border-radius: .25rem !important;
+}
+
+    button:hover {
+        box-shadow: 0px 1px 22px 2px #08ac52c4;
+        transform: perspective(7rem) translate3d(0, 0, .25rem);
+    }
+
+    button.positive {
+        background: linear-gradient(45deg, var(--color-secondary), #08ac4b);
+        border: none;
+        outline: none;
+        color: white;
+    }
+
+    button.negative {
+        border-color: var(--color-secondary);
+        border-width: 1px;
+        color: var(--color-secondary);
+        border-style: solid;
+        background: transparent;
+    }
+
+.container,
+.container-sm {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 !important;
+}
+
+.container {
+    max-width: 1128px
+}
+
+.container-sm {
+    max-width: 848px
+}
+
+.container .container-sm {
+    max-width: 800px;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.main section.read-more img.arrow {
+    width: 3.5em;
+    margin: 0;
+    animation: MoreArrowAnimation 1.3s cubic-bezier(0.61, 0.01, 0.49, 0.8) infinite;
+}
+
+    .main section.read-more img.arrow:hover {
+        transform: perspective(6rem);
+        cursor: pointer;
+        animation: none;
+    }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--color-text-title);
+    font-family: 'Heebo Bold';
+    margin: .5rem;
+}
+
+p {
+    font-family: 'Heebo Regular';
+    font-weight: 200;
+    color: var(--color-text-setence);
+}
+
+b {
+    color: var(--color-primary);
+    font-family: 'Heebo Bold';
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+section.contact .contact-form input,
+section.contact .contact-form textarea {
+    background: var(--transparent-bg-dark);
+    color: white;
+    border-color: #404d64;
+    border-width: 1px;
+    border-style: solid;
+    max-width: 15rem;
+    padding: .35rem;
+    border-radius: .4rem;
+    outline: none;
+}
+
+    section.contact .contact-form input:focus {
+        border-color: var(--color-secondary);
+        transition: 0.2s;
+        box-shadow: 0px 1px 12px 1px #08ac4b;
+    }
+
+section.contact .contact-form textarea {
+    min-width: 10rem;
+    width: 25rem;
+    max-width: 100%;
+    min-height: 10rem;
+}
