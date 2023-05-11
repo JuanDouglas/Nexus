@@ -23,10 +23,10 @@ public class EmailMessageSender
     /// <param name="to"></param>
     /// <returns></returns>
     /// 
-    public async Task SendEmailAsync(string htmlContent, string subject, string to, string from = "no-reply@mail.nexus-company.net", bool isHtml = true)
-        => await SendWithSmtpAsync(htmlContent, subject, to, from,isHtml);
+    public async Task SendEmailAsync(string htmlContent, string subject, string to, string from = "no-reply@mail.nexus-company.net", bool isHtml = true, string forwad = null)
+        => await SendWithSmtpAsync(htmlContent, subject, to, from, isHtml, forwad);
 
-    private async Task SendWithSmtpAsync(string htmlContent, string subject, string to, string from, bool isHtml)
+    private async Task SendWithSmtpAsync(string htmlContent, string subject, string to, string from, bool isHtml, string forwad = null)
     {
         try
         {
@@ -35,6 +35,10 @@ public class EmailMessageSender
 
             mail.From = new MailAddress(from);
             mail.To.Add(to);
+
+            if (!string.IsNullOrEmpty(forwad))
+                mail.ReplyToList.Add(new MailAddress(forwad));
+
             mail.Subject = subject;
             mail.Body = htmlContent;
             mail.IsBodyHtml = isHtml;

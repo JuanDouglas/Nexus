@@ -6,6 +6,7 @@ using System.Net;
 namespace Nexus.Web.Controllers;
 public class HomeController : Controller
 {
+    private const string contactMail = "contact@mail.nexus-company.net";
     private protected readonly IHCaptchaApi captchaValidator;
     private protected readonly string hCaptchaKey;
     private protected readonly EmailMessageSender emailSender;
@@ -39,15 +40,14 @@ public class HomeController : Controller
 #endif
 
         await emailSender.SendEmailAsync($"Sou {contact.Name} da {contact.Company} é tenho o seguinte projeto: \n {contact.Project}",
-            "Meu projeto",
-            "contact@mail.nexus-company.net",
-            contact.Email, false);
+            "Seu projeto",
+            $"{contactMail},{contact.Email}", isHtml: false);
 
         string content = Properties.Resources.Contact
             .Replace("{name}", contact.Name)
             .Replace("{company}", contact.Company);
 
-        await emailSender.SendEmailAsync(content, "Seu projeto", contact.Email, "contact@mail.nexus-company.net");
+        await emailSender.SendEmailAsync(content, "Seu projeto", contact.Email, contactMail);
 
         return View("Index");
     }

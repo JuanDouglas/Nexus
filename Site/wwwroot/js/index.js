@@ -56,10 +56,6 @@ $(async function () {
 
             list[i].showing = mostrando;
         });
-
-        await document
-            .getElementById('video-mockup')
-            .play();
     });
 
     nextCarousel();
@@ -122,15 +118,12 @@ function animateSpan(span, text) {
     });
 }
 
-function redirectToLogin(){
-    $('#redirectModal')
-        .modal('show', { backdrop: 'static', keyboard: false });
+function redirectToLogin() {
+    redirectTo('https://oauth.nexus-company.net/Authentication');
+}
 
-    document.title = 'Redirecting...';
-
-    setTimeout(function () {
-        window.location.href ='https://oauth.nexus-company.net/Authentication';
-    }, 2500);
+function redirectToRegister() {
+    redirectTo('https://oauth.nexus-company.net/Account/Register');
 }
 
 $.fn.parallaxEffect = function (options) {

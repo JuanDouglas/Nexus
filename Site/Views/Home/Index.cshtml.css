@@ -247,20 +247,6 @@ div.cards .feature {
     }
 }
 
-@keyframes MoreArrowAnimation {
-    0% {
-        transform: translate3d(0, 0, 1rem);
-    }
-
-    50% {
-        transform: translate3d(0, 1rem, 1rem);
-    }
-
-    100% {
-        transform: translate3d(0, 0, 1rem);
-    }
-}
-
 @keyframes SpanTextAnimation {
     0% {
         transform: translate3d(-10rem, 0, 0);
@@ -410,13 +396,21 @@ img.hero-glow {
 }
 
 @media screen and (max-width: 640px) {
-    main::before {
+    .main::before {
         height: 7.3rem;
     }
 
     section.contact::before {
         height: 7.3rem;
     }
+
+    section.content.footer {
+        overflow: hidden;
+    }
+
+        section.content.footer img {
+            height: 11.3rem;
+        }
 }
 
 span {

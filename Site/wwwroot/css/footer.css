@@ -1,6 +1,8 @@
 ﻿footer {
     background: var(--color-footer);
     z-index: 1000;
+    position: relative;
+    text-align: center;
 }
 
     footer .singup h3 {
@@ -226,17 +228,20 @@ section.singup {
     }
 }
 
-section.content.footer .content-divided img {
-    background: transparent;
-    margin: auto;
-    padding: 0;
-    width: 800px;
-    max-width: 60%;
-    transform: scale3d(1.25, 1.25, 1.5);
-    animation: floating 3s ease-in-out infinite;
-    pointer-events: none;
+section.content.footer .content-divided {
+    margin: -5rem auto 0 auto !important;
 }
 
+    section.content.footer .content-divided img {
+        background: transparent;
+        margin: auto;
+        padding: 0;
+        width: 800px;
+        max-width: 60%;
+        transform: scale3d(1.25, 1.25, 1.5);
+        animation: floating 3s ease-in-out infinite;
+        pointer-events: none;
+    }
 
 h1,
 h2,
@@ -246,4 +251,14 @@ h5 {
     color: var(--color-text-title);
     font-family: 'Heebo Bold';
     margin: .5rem;
+}
+
+@media screen and (max-width: 640px) {
+    section.content.footer {
+        overflow: hidden;
+    }
+
+        section.content.footer img {
+            height: 11.3rem;
+        }
 }

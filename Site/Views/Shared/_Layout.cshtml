@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Nexus.Web.styles.css" asp-append-version="true" />
-    <link href="~/font/Heebo/heebo.css" rel="stylesheet" asp-append-version="true">
-    <link rel="stylesheet" href="~/css/main.css">
     <link href="~/lib/font-awesome/css/fontawesome.css" rel="stylesheet">
     <link href="~/lib/font-awesome/css/brands.css" rel="stylesheet">
     <link href="~/lib/font-awesome/css/solid.css" rel="stylesheet">
@@ -58,8 +56,8 @@
                     </p>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="button button-primary"
-                            onclick="redirectAndBack('/Account/Register');">
+                    <button type="button" class="positive"
+                            onclick="redirectToRegister()">
                         Cadastro
                     </button>
                 </div>
@@ -87,26 +85,26 @@
                         <ul class="footer-social-links list-reset">
                             <li>
                                 <a href="https://www.linkedin.com/company/nexuscompany">
+                                    <i class="fa fa-lg fa-brands fa-linkedin"></i>
                                     <span class="screen-reader-text">Linkedin</span>
-                                    <i class="fa fa-lg fa-brands fa-linkedin"> </i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://twitter.com/TheNexusCompany">
+                                    <i class="fa fa-lg fa-brands fa-twitter"></i>
                                     <span class="screen-reader-text">Twitter</span>
-                                    <i class="fa fa-lg fa-brands fa-twitter"> </i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/company.nexus/">
-                                    <span class="screen-reader-text">Instagram</span>
                                     <i class="fa fa-lg fa-brands fa-instagram"></i>
+                                    <span class="screen-reader-text">Instagram</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://wa.me/5561992606441?text=Ol%C3%A1%2C%20pode%20me%20ajudar?">
-                                    <span class="screen-reader-text">Whatsapp</span>
                                     <i class="fa fa-lg fa-brands fa-whatsapp"></i>
+                                    <span class="screen-reader-text">Whatsapp</span>
                                 </a>
                             </li>
                         </ul>
@@ -119,7 +117,7 @@
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Modals", required: false)
-    @*@await Html.PartialAsync("_RedirectModal")*@
+    @await Html.PartialAsync("_RedirectModal")
 </body>
 
 </html>
